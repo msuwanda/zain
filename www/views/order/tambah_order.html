@@ -1,0 +1,44 @@
+<ul class="breadcrumb">
+	<li><a href="#">Pages</a></li>
+	<li><a href="#" class="active">Order</a></li>
+</ul>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">Tambah Resi Status Pengiriman
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+				<div id="pesan" class="hidden">
+					<div role="alert"></div>
+					<button id="button-selesai" class="btn btn-info btn-sm">Kembali
+					</button>
+				</div>
+
+      <div class="col-md-12 col-sm-12 col-xs-12" >
+  <form  role="form" onsubmit="return false;">
+        <div class="col-md-12">
+          <div class='form-group'>
+            <label>Resi</label>
+							<input name="order_id" class='form-control hidden'>
+							<input name="order_status" class='form-control hidden' value="2">
+              <input name="order" class='form-control'>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group form-actions">
+              <button id="button-simpan" name="action" value="simpan" class="btn btn-primary waves-effect waves-light">Submit</button>
+          </div>
+        </div>
+      </form>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>
+<script>
+	jQuery.getScript("views/order/tambah_order.js");
+</script>
