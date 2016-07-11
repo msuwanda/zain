@@ -1,0 +1,108 @@
+<ul class="breadcrumb">
+  <li><a href="#">Pages</a></li>
+  <li><a href="#">Order</a></li>
+</ul>
+<div class="row">
+  <div class="col-md-12 p-l-15">
+  <button class="btn btn-complete btn-cons hidden" id="btn-paid">Paid</button>
+  <button class="btn btn-complete btn-cons hidden" id="btn-kirim">Pengiriman</button>
+  <button class="btn btn-success btn-cons  hidden" id="btn-com">Complete</button>
+  <input value="" name="order_id" class="hidden">
+  <button class="btn btn-danger btn-cons hidden" id="btn-cancel">Cancel</button>
+  </div>
+</div>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="invoice padding-50 sm-padding-10">
+                  <div>
+                    <div class="pull-left">
+                      <img width="235" height="47" alt="" class="invoice-logo" data-src-retina="assets/img/invoice/squarespace2x.png" data-src="assets/img/invoice/squarespace.png" src="assets/img/invoice/squarespace2x.png">
+                      <address class="m-t-10">Simply & Unique</address>
+                    </div>
+                    <div class="pull-right sm-m-t-20">
+                      <h2 class="font-montserrat all-caps hint-text" id="order_status"></h2>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <br>
+                  <br>
+                  <div class="container-sm-height">
+                    <div class="row-sm-height">
+                      <div class="col-md-9 col-sm-height sm-no-padding">
+                        <p class="small no-margin">Invoice to</p>
+                        <h5 class="semi-bold m-t-0" id="order_nama"></h5>
+                        <address id="alamat">
+
+                        </address>
+                      </div>
+                      <div class="col-md-3 col-sm-height col-bottom sm-no-padding sm-p-b-20">
+                        <br>
+                        <div>
+                          <div class="pull-left font-montserrat bold all-caps">Order No :</div>
+                          <div class="pull-right" id="order_id"></div>
+                          <div class="clearfix"></div>
+                        </div>
+                        <div>
+                          <div class="pull-left font-montserrat bold all-caps">Order date :</div>
+                          <div class="pull-right" id="order_tanggal"></div>
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table m-t-50" id="order">
+                      <thead>
+                        <tr>
+                          <th class="">Product</th>
+                          <th class="text-center">Prices</th>
+                          <th class="text-center">Qty</th>
+                          <th class="text-right">Total</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <div>
+                    <img width="150" height="58" alt="" class="invoice-signature" data-src-retina="assets/img/invoice/signature2x.png" data-src="assets/img/invoice/signature.png" src="assets/img/invoice/signature2x.png">
+                    <p>Manager Marketing</p>
+                  </div>
+                  <br>
+                  <br>
+                  <div class="container-sm-height">
+                    <div class="row row-sm-height b-a b-grey">
+                      <div class="col-sm-2 col-sm-height col-middle p-l-25 sm-p-t-15 sm-p-l-15 clearfix sm-p-b-15">
+                        <h5 class="font-montserrat all-caps small no-margin hint-text bold">Product</h5>
+                        <h3 class="no-margin" id="total_produk"></h3>
+                      </div>
+                      <div class="col-sm-5 col-sm-height col-middle clearfix sm-p-b-15">
+                        <h5 class="font-montserrat all-caps small no-margin hint-text bold">Pengiriman</h5>
+                        <h3 class="no-margin" id="total_ongkir"></h3>
+                      </div>
+                      <div class="col-sm-5 text-right bg-menu col-sm-height padding-15">
+                        <h5 class="font-montserrat all-caps small no-margin hint-text text-white bold">Total</h5>
+                        <h1 class="no-margin text-white" id="total_harga">Rp.</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <p class="small hint-text"></p>
+                  <br>
+                  <hr>
+                  <div>
+                    <img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo_2x.png" width="78" height="22">
+                    <span class="m-l-70 text-black sm-pull-right">+62 81322 054 844</span>
+                    <span class="m-l-40 text-black sm-pull-right">zain@mymandala.id</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <script>
+            	jQuery.getScript("views/order/view_order.js");
+            </script>

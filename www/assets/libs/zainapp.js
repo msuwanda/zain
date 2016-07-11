@@ -15,7 +15,7 @@ function getSelectMenu(menuId){
 function loadMenu(param) {
   jQuery('#mainmenu').removeClass('sidebar-open');
   jQuery('#pagesidebar').removeClass('visible');
-
+	localStorage.setItem('appkode',param) ;
   switch(param){
 		// dokumen klien
 		case 'listorder':
@@ -27,16 +27,24 @@ function loadMenu(param) {
     case 'listproduk':
 			jQuery('#conten-body').load('views/produk/list.html');
 			break;
+		case 'tambahproduk':
+ 		 jQuery('#conten-body').load('views/produk/tambah.html');
+ 		 break;
   }
 }
 function loadFile(param,fid) {
   jQuery('#mainmenu').removeClass('sidebar-open');
     jQuery('#pagesidebar').removeClass('visible');
+		localStorage.setItem('appkode',param) ;
   switch(param){
 		// dokumen klien
 		case 'vieworder':
       dataFeed = {filter: [{name: "order_id", value: fid}]} ;
 			jQuery('#conten-body').load('views/order/view_order.html');
+			break;
+		case 'editproduk':
+	    dataFeed = {filter: [{name: "produk_id", value: fid}]} ;
+			jQuery('#conten-body').load('views/produk/tambah.html');
 			break;
     case 'addresi':
       dataFeed = fid ;
@@ -133,4 +141,15 @@ function namaBulan(param){
 		default:
 			return 'PILIH BULAN';
 	}
+}
+function getNamalogin() {
+	dataTemp	= JSON.parse(localStorage.zain);
+	loginNama = dataTemp.usr_nama ;
+	jQuery("#login_nama").html(loginNama) ;
+}
+getNamalogin() ;
+function logOut() {
+	localStorage.removeItem('zain') ;
+	localStorage.setItem('loged','0');
+	document.location.href = 'login.html';
 }
