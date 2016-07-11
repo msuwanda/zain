@@ -6,9 +6,9 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>zainproduction</name>
-    <description>Hello World sample application that responds to the deviceready event.</description>
-    <author email="support@phonegap.com" href="http://phonegap.com">PhoneGap Team</author>
+    <name>Zain</name>
+    <description>Zain Store</description>
+    <author>Mandala Team</author>
     <content src="index.html" />
     <icon src="icon.png" />
     <access origin="*" />
